@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test JS</title>
+
+</head>
+<body>
+<h1 id="rs">
+
+</h1>
+
+
+
+<input type="number" id="st1">
+<input type="number" id="st2"><br><br>
+<button onclick="sum()">Tính Tổng</button>
+<button onclick="sub()">Tính Hiệu</button>
+<button onclick="mulTip()">Tính tích</button>
+<button onclick="divison()">Tính thương</button>
+
+
+
+</body>
+
+</html>
+<script>
+
+    function sum() {
+        let a = +document.getElementById('st1').value;
+        let b = +document.getElementById('st2').value;
+        document.getElementById('rs').innerHTML = 'Tổng là: ' +(a+b);
+    }
+
+    function sub() {
+        let a = +document.getElementById('st1').value;
+        let b = +document.getElementById('st2').value;
+        document.getElementById('rs').innerHTML = 'Hiệu là: ' +(a-b);
+    }
+    function mulTip() {
+        let a = +document.getElementById('st1').value;
+        let b = +document.getElementById('st2').value;
+        document.getElementById('rs').innerHTML = 'Tích là: ' +(a*b);
+    }
+    function divison() {
+        let a = +document.getElementById('st1').value;
+        let b = +document.getElementById('st2').value;
+        document.getElementById('rs').innerHTML = 'Thương là: ' +(a/b);
+    }
+
+    // function checkBox() {
+    //     let add = document.getElementById('list2').value;
+    //     alert(add);
+    // }
+    // addEventListener('change', checkBox)
+
+
+</script>
