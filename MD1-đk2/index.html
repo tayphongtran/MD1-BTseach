@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button">kết quả được in tự động nhé</button>
+<br>
+
+<input type="number" onclick="daTas(this.value)" oninput="daTas(this.value)" value="1">
+<h1 id="reSult">
+    Độ C sang độ F:
+</h1><br>
+
+<input type="number" onclick="daTa(this.value)" oninput="daTa(this.value)" value="1">
+
+<h1 id="hooked">
+    đổi m sang feet:
+</h1>
+
+<h2 id="">
+
+</h2>
+</body>
+<script>
+    // BT1: độ C sang độ F
+    //  function daTas(checks) {
+    //      checks = parseFloat(checks)
+    //      document.getElementById('reSult').innerHTML = (checks - 32)/1.8;
+    //  }
+
+    // BT2: chuyển m sang feet ft =m * 3.2808
+    // function daTa(checks) {
+    //     //parseFloat là convert string sang số thực
+    //     checks = parseFloat(checks)
+    //     document.getElementById('hooked').innerHTML = 3.2808*checks;
+    // }
+
+    // Bài 3: Tính diện tích hình vuông khi biết cạnh a.
+    // let a;
+    // a = prompt('nhập cạnh a:');
+    // function dientich() {
+    //     let S = a*a;
+    //     document.write('<p>diện tích hình vuông là:</p>', S)
+    // }
+    // dientich();
+
+    // Bài 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.
+    // let a,b;
+    // a = +prompt('nhập cạnh a:')
+    // b = +prompt('nhập cạnh b:')
+    // function acreage() {
+    //     let S = a*b;
+    //     document.write('<h1>Diện tích hcn là:</h1>', S)
+    // }
+    // acreage();
+
+    // Bài 5: Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.
+    //     let a,b;
+    //     a = prompt('cạnh kề tam giác vuông a:');
+    //     b = prompt('cạnh kề tam giác vuông b:');
+    //     function acreage() {
+    //         let S = a*b/2;
+    //         alert('diện tích tam giác vuông, biết 2 cạnh kề  =' +S)
+    //     }
+    //     acreage();
+
+    // Bài 6: Giải phương trình bậc 1.
+    //     let a , b;
+    //     a = +prompt('nhập một số bất kì');
+    //     b = +prompt('nhập một số bất kì');
+    //     if (a > 0 || a < 0) {
+    //         if (a > b || a < b) {
+    //             alert('phương trình có một nghiệm là '+b/a)
+    //         }else {
+    //             alert('nếu a=b phương trình vô số nghiệm ')
+    //         }
+    //     }else {
+    //         alert('nếu a=0 thì phương trình vô nghiệm')
+    //     }
+
+    // Bài 7: Giải phương trình bậc 2.
+    //         let a,b,c;
+    //         a = +prompt('nhập  hệ số ax^2 của ptb2:')
+    //         b = +prompt('nhập hệ số bx của ptb2:')
+    //         c = +prompt('nhập  số c của ptb2:')
+    //             function equation() {
+    //                 let denta = b*b - 4*a*c;
+    //                 console.log(denta)
+    //                 if (a !== 0) {
+    //                     if (denta < 0) {
+    //                         alert('phương trình vô nghiệm');
+    //                     }else if (denta === 0) {
+    //                         alert('phương trình có nghiệm x1=x2='+ (-b/(2*a)));
+    //                     }else {
+    //                         alert('phương trình có 2 nghiệm phân biệt là: x1 =' + (-b + Math.sqrt(denta))/(2*a) + 'x2 =' + (-b - Math.sqrt(denta))/(2*a))
+    //                     }
+    //                 }else {
+    //                     if (b > 0 || b < 0) {
+    //                         if (b > c || c > b) {
+    //                             alert('phương trình có một nghiệm là '+ c/b)
+    //                         }else {
+    //                             alert('nếu a=b phương trình vô số nghiệm ')
+    //                         }
+    //                     }else {
+    //                         alert('nếu a=0 thì phương trình vô nghiệm')
+    //                     }
+    //                 }
+    //             }
+    //             equation();
+
+    // Bài 8: Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.
+    // let a;
+    // a = +prompt('nhập số tuổi của bạn zô:')
+    //     if (a > 0 && a < 120) {
+    //         alert('số tuổi của bạn rất đẹp')
+    //     }else {
+    //         alert('bạn đã lên thiên đàng không còn ở thế giới này nữa:')
+    //     }
+
+    /* Bài 9: Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:
+
+a,b,c > 0
+a + b > c
+b + c > a
+a + c > b
+    */
+    // let a,b,c;
+    // a = +prompt('nhập sô của 3 cạnh tam giác lần lượt:');
+    // b = +prompt('nhập sô của 3 cạnh tam giác lần lượt:');
+    // c = +prompt('nhập sô của 3 cạnh tam giác lần lượt:');
+    // if (a,b,c > 0 && a +b > c && b +c > a && a + c > b) {
+    //     alert('đích thực là số 3 cạnh của tam giác chuẩn!')
+    // }else {
+    //     alert('3 số vừa nhập không phải 3 cạnh của một tam giác')
+    // }
+
+    // Bài 10: Viết chương trình tính giá điện.
+    // let a, b, c;
+    // a = +prompt('bạn đã nhận được thông báo số điện tiêu thụ tháng này từ bên chúng tôi! nếu bạn muốn kiểm tra xác thực lại thì mời bạn nhập số điện vào:');
+    // b = +prompt('bạn hãy nhập giá tiền điện từ công ty điện lực Gia Lâm niêm yết vào đây:')
+    //
+    // function giadien() {
+    //     let c = a * b;
+    //     let giathuc = c + a * b;
+    //     if (a < 300) {
+    //         d = a * b * 0.05;
+    //         giathuc = c + d;
+    //         alert('bạn chiu phí 5% khi tiêu thụ nhỏ hơn 300kw/h là:' + giathuc + 'vnd');
+    //     } else {
+    //         d = a * b * 0.1;
+    //         giathuc = c + d;
+    //         alert('bạn chịu phí 10% khi tiêu thụ lớn hơn 300kw/h là:' + giathuc + 'vnd');
+    //     }
+    // }
+    //
+    // giadien();
+
+    // Bài 11: Viết chương trình tính thuế thu nhập cá nhân.
+    //         let a,
+    //         a = +prompt('bạn hay nhập thu nhập cá nhân một năm của bạn vào đây nào :');
+    //     function presonalTax() {
+    //         let b = a;
+    //         if (a > 100000000) {
+    //             b = a*0.1
+    //             d = a + b
+    //             alert('bạn cần nộp thuế là ' +d)
+    //         }else {
+    //             alert('bạn không phải nộp thuế')
+    //         }
+    //     }
+    //     presonalTax();
+    // Bài 12: Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.
+    let a, b,c;
+
+    // lãi xuất ngân hàng là 7% một năm
+    function interest() {
+        a = +prompt('số tiền bạn gửi')
+        c = +prompt('số tháng gửi:')
+        let b = a * 0.07*c / 12
+        if (b === 12) {
+            b = a*0.07
+            alert('số tiền bạn gửi trong vòng 12 tháng thu được thực theo số tháng ngắn hạn' +b )
+            if (b >= 24) {
+                c = 24
+                b = 0.07*(0.07*a)
+                alert('số tiền bạn gửi nhận được trong vòng'+ c + 'năm  bằng:'+b )
+            }else {
+                c =23;
+                b = 0.07*0.07*11*a/c;
+                alert('bạn gửi được số tiền thời gian là'+c+ '1 năm 11 tháng thì tiền lãi bằng'+b)
+            }
+        }else {
+            b = a*0.07*c/12
+            alert(' nếu gửi' +c  + 'tháng thì số tiền lãi bằng:'+b)
+        }
+    }
+    interest();
+</script>
+</html>
