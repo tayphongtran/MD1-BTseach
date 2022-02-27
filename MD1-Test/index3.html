@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+
+</body>
+<script>
+    switch (new Date().getDay()) {
+        case 0:
+            day = "Chủ Nhật";
+
+        case 1:
+            day = "Thứ hai";
+            break;
+        case 2:
+            day = "Thứ ba";
+            break;
+        case 3:
+            day = "Thứ tư";
+            break;
+        case 4:
+            console.log('vào đây đúng không nhỉ')
+            day = "Thứ năm";
+            console.log('day = ', day)
+            break;
+        case 5:
+            day = "Thứ sáu";
+            break;
+        case 6:
+            day = "Thứ bảy";
+            break;
+    }
+    console.log('check: ',(new Date().getDay()))
+
+
+</script>
+
+</html>

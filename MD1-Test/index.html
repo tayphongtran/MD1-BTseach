@@ -8,13 +8,29 @@
     <title>Document</title>
 </head>
 <body>
-
-<form action="https://www.google.com.vn/search">
-    <input type="text" name="q"/>
-    <input type="submit" value="Tìm kiếm"/>
-</form>
+<p id="event">Click</p>
+<img id="one" src="./imgae/em.jpg" alt="LN">
 </body>
 <script>
+    let img = document.getElementById('one');
+function changeSize() {
+    img.style.width = 200 + 'px'
+    img.style.height = 300 + 'px'
+}
+
+img.addEventListener('click',changeSize)
+
+let pul = document.getElementById('event')
+    function change() {
+        pul.style.color = 'red';
+        pul.style.fontSize = 100+'px';
+    }
+    pul.addEventListener('click',change)
+
+
+   function change2() {
+
+   }
 
 </script>
 </html>
