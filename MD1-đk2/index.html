@@ -5,15 +5,16 @@
     <title>Title</title>
 </head>
 <body>
-<button type="button">kết quả được in tự động nhé</button>
-<br>
 
-<input type="number" onclick="daTas(this.value)" oninput="daTas(this.value)" value="1">
+<button onclick="daTas()">kết quả được in tự động nhé</button>
+
+
+<input id="add" type="number"   >
 <h1 id="reSult">
     Độ C sang độ F:
 </h1><br>
 
-<input type="number" onclick="daTa(this.value)" oninput="daTa(this.value)" value="1">
+<input id="m" type="number">
 
 <h1 id="hooked">
     đổi m sang feet:
@@ -25,17 +26,19 @@
 </body>
 <script>
     // BT1: độ C sang độ F
-    //  function daTas(checks) {
-    //      checks = parseFloat(checks)
-    //      document.getElementById('reSult').innerHTML = (checks - 32)/1.8;
+    //  function daTas() {
+    //     let checks = +document.getElementById('add').value;
+    //     c = checks*9/5 +32;
+    //     document.getElementById('reSult').innerText = "F =" +c
     //  }
 
     // BT2: chuyển m sang feet ft =m * 3.2808
-    // function daTa(checks) {
-    //     //parseFloat là convert string sang số thực
-    //     checks = parseFloat(checks)
-    //     document.getElementById('hooked').innerHTML = 3.2808*checks;
-    // }
+
+    //     function daTas() {
+    //         let m = document.getElementById('m').value;
+    //         mf = m*3.2808
+    //         document.getElementById('hooked').innerText = 'ft=' + mf
+    //     }
 
     // Bài 3: Tính diện tích hình vuông khi biết cạnh a.
     // let a;
@@ -175,27 +178,27 @@ a + c > b
     let a, b,c;
 
     // lãi xuất ngân hàng là 7% một năm
-    function interest() {
-        a = +prompt('số tiền bạn gửi')
-        c = +prompt('số tháng gửi:')
-        let b = a * 0.07*c / 12
-        if (b === 12) {
-            b = a*0.07
-            alert('số tiền bạn gửi trong vòng 12 tháng thu được thực theo số tháng ngắn hạn' +b )
-            if (b >= 24) {
-                c = 24
-                b = 0.07*(0.07*a)
-                alert('số tiền bạn gửi nhận được trong vòng'+ c + 'năm  bằng:'+b )
-            }else {
-                c =23;
-                b = 0.07*0.07*11*a/c;
-                alert('bạn gửi được số tiền thời gian là'+c+ '1 năm 11 tháng thì tiền lãi bằng'+b)
-            }
-        }else {
-            b = a*0.07*c/12
-            alert(' nếu gửi' +c  + 'tháng thì số tiền lãi bằng:'+b)
-        }
-    }
-    interest();
+    // function interest() {
+    //     a = +prompt('số tiền bạn gửi')
+    //     c = +prompt('số tháng gửi:')
+    //     let b = a * 0.07*c / 12
+    //     if (b === 12) {
+    //         b = a*0.07
+    //         alert('số tiền bạn gửi trong vòng 12 tháng thu được thực theo số tháng ngắn hạn' +b )
+    //         if (b >= 24) {
+    //             c = 24
+    //             b = 0.07*(0.07*a)
+    //             alert('số tiền bạn gửi nhận được trong vòng'+ c + 'năm  bằng:'+b )
+    //         }else {
+    //             c =23;
+    //             b = 0.07*0.07*11*a/c;
+    //             alert('bạn gửi được số tiền thời gian là'+c+ '1 năm 11 tháng thì tiền lãi bằng'+b)
+    //         }
+    //     }else {
+    //         b = a*0.07*c/12
+    //         alert(' nếu gửi' +c  + 'tháng thì số tiền lãi bằng:'+b)
+    //     }
+    // }
+    // interest();
 </script>
 </html>

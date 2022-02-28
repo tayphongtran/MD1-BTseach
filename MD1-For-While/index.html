@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+<script>
+<!--    vòng lặp for  thịt các đối tượng vd như table-->
+    // let couunTing;
+    // couunTing = "<table border='1' width='400' cellspacing='0' cellpadding='3'";
+    // for ( i=1; i <= 15; i++) {
+    //     couunTing = couunTing + "<tr>";
+    //     for ( j=1; j<=14;j++){
+    //         couunTing = couunTing + "<td>" + i*j + "</td>" ;
+    //     }
+    //     couunTing = couunTing + "</tr>";
+    //     }
+    // couunTing = couunTing + "</table>";
+    // document.write(couunTing + " bảng nè")
+// thử dùng vòng lặp While
+    let couunTing,i,j;
+    i = j =1
+    couunTing = "<table border='1' width='400' cellspacing='0' cellpadding='3'";
+    while ( i <= 14) {
+        couunTing = couunTing + "<tr>";
+        while ( j <= 13){
+            j++;
+            couunTing = couunTing + "<td>" + i*j + "</td>" ;
+        }
+        j =1;
+        i++;
+        couunTing = couunTing + "</tr>";
+    }
+    couunTing = couunTing + "</table>";
+    document.write(couunTing + " bảng nè")
+</script>
+</html>
