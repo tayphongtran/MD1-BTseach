@@ -8,61 +8,80 @@
             font-size: 20px;
             line-height: 3;
         }
-     input {
-         margin: 10px 25px;
-         width: 50px;
-         height: 15px;
-         border-radius: 5px;
-         background: #d3d3d3;
-         outline: none;
-         opacity: 0.7;
-         -webkit-transition: .2s;
-         transition: opacity .2s;
-    }
-     /* #second {*/
 
-     /*       -webkit-appearance: none;*/
-     /*       appearance: none;*/
-     /*       width: 25px;*/
-     /*       height: 25px;*/
-     /*       border-radius: 50%;*/
-     /*       background: DodgerBlue;*/
-     /*       cursor: pointer;*/
+        input {
+            margin: 10px 25px;
+            width: 50px;
+            height: 15px;
+            border-radius: 5px;
+            background: #d3d3d3;
+            outline: none;
+            opacity: 0.7;
+            -webkit-transition: .2s;
+            transition: opacity .2s;
+        }
 
-     /*}*/
+        /* #second {*/
+
+        /*       -webkit-appearance: none;*/
+        /*       appearance: none;*/
+        /*       width: 25px;*/
+        /*       height: 25px;*/
+        /*       border-radius: 50%;*/
+        /*       background: DodgerBlue;*/
+        /*       cursor: pointer;*/
+
+        /*}*/
     </style>
 </head>
 <body>
-   <div><input id="first" type="range" min="0" max="30" onclick="full()" value="0">Good</div>
-    <div><input id="second" type="range" min="0" max="30" onclick="full()" value="0">fast</div>
-    <div><input id="three" type="range" min="0" max="30" onclick="full()" value="0">cheap</div>
+<input id="first" type="range" min="0" max="30" onclick="full()">Good <br>
+<input id="second" type="range" min="0" max="30" onclick="full1()">fast <br>
+<input id="three" type="range" min="0" max="30" onclick="full2()">cheap
 
 </body>
 <script>
-      a = +document.getElementById('first').value;
-      b = +document.getElementById('second').value;
-      c = +document.getElementById('three').value;
+    //BT good fast cheap
+    let first = true;
+    let second = true;
+    let three = true;
+
     function full() {
-        document.getElementById('first').max = a
-        document.getElementById('second').max = b
-        document.getElementById('three').max = c
-
-
-
+        first =! first;
+        if (first) {
+            first = document.getElementById('first').value = 30;
+            if (second && three) {
+                document.getElementById('second').value = 0;
+                second = true
+            }
+        }else  {
+            first = document.getElementById('first').value = 0;
+        }
     }
-    full();
-
-
-
-
-
-
-
-
-
-
-
-
+    function full1() {
+        second =! second;
+        if (second) {
+            second = document.getElementById('second').value = 30;
+            if (first && three) {
+                document.getElementById('three').value = 0;
+                three = true
+            }
+        }else  {
+            first = document.getElementById('second').value = 0;
+        }
+    }
+    function full2() {
+        three =! three;
+        if (three) {
+            three = document.getElementById('three').value = 30;
+            if (second && first) {
+                document.getElementById('first').value = 0;
+                first = true
+            }
+        }else  {
+            three = document.getElementById('three').value = 0;
+        }
+    }
 
 
 
